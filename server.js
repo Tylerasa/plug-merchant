@@ -25,3 +25,8 @@ const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("Databse connection established");
 });
+
+
+app.listen(port, () => {
+    console.log(`Server running on port: ${port}`);
+  });
