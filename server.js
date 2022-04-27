@@ -26,7 +26,9 @@ connection.once("open", () => {
   console.log("Databse connection established");
 });
 
+const usersRouter = require("./routes/users");
+app.use("/users", usersRouter);
 
 app.listen(port, () => {
-    console.log(`Server running on port: ${port}`);
-  });
+  console.log(`Server running on port: ${port}`);
+});

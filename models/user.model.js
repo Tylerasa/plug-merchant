@@ -12,6 +12,18 @@ const userSchema = new Schema({
     required: true,
     trim: true,
     minlength: 3
+  },
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+    minlength: 3  
+  },
+  region: {
+    type: String,
+    required: true,
+    trim: true,
+    minlength: 3  
   }
 });
 
