@@ -36,7 +36,11 @@ router.route("/register").post((req, res) => {
             const token = generateAccessToken(user.id, user.username);
             res.json({
               token,
-              user
+              user: {
+                name: user.name,
+                region: user.region,
+                username: user.username
+              }
             });
           });
         });
@@ -61,7 +65,11 @@ router.route("/login").post((req, res) => {
 
         res.json({
           token,
-          user
+          user: {
+            name: user.name,
+            region: user.region,
+            username: user.username
+          }
         });
       });
     }
