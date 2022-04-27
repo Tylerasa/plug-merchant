@@ -17,13 +17,13 @@ router.route("/").get((req, res) => {
 });
 
 router.route("/register").post((req, res) => {
-  const { username, password } = req.body;
+  const { username, password, name, region } = req.body;
 
-  if (!password || !username) {
+  if (!password || !username || !name || !region) {
     return res.status(400).json({ msg: "Please Fill All Fields" });
   }
 
-  const newUser = new User({ username, password });
+  const newUser = new User({ username, password, name, region });
   User.findOne({ username: username }, (err, user) => {
     if (user) {
       res.send({ message: "User Already Exist" });
