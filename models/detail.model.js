@@ -16,7 +16,7 @@ const detailSchema = new Schema({
   avg: {
     type: Schema.Types.Decimal128
   },
-  user: {
+  username: {
     type: String
   },
 });
