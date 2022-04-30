@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const detailSchema = new Schema({
+  week: {
+    type: String
+  },
   deployed: {
     type: Number
   },
@@ -10,11 +13,38 @@ const detailSchema = new Schema({
   inactive: {
     type: Number
   },
-  total: {
+  totalTickets: {
     type: Number
   },
   avg: {
     type: Schema.Types.Decimal128
+  },
+  call: {
+    type: String
+  },
+  visitation: {
+    type: String
+  },
+  day1: {
+    type: Number
+  },
+  day2: {
+    type: Number
+  },
+  day3: {
+    type: Number
+  },
+  day4: {
+    type: Number
+  },
+  day5: {
+    type: Number
+  },
+  day6: {
+    type: Number
+  },
+  toal: {
+    type: Number
   },
   username: {
     type: String,

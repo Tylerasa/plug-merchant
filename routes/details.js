@@ -12,15 +12,41 @@ router.get("/", auth, (req, res) => {
 });
 
 router.route("/add/:id").post(auth, async (req, res) => {
-  const { deployed, active, inactive, total, avg } = req.body;
-  const { id } = req.params;
-  const user = await User.findById(id);
-  const newDetail = new Detail({
+  const {
+    week,
     deployed,
     active,
     inactive,
-    total,
+    totalTickets,
     avg,
+    call,
+    visitation,
+    day1,
+    day2,
+    day3,
+    day4,
+    day5,
+    day6,
+    total
+  } = req.body;
+  const { id } = req.params;
+  const user = await User.findById(id);
+  const newDetail = new Detail({
+    week,
+    deployed,
+    active,
+    inactive,
+    totalTickets,
+    avg,
+    call,
+    visitation,
+    day1,
+    day2,
+    day3,
+    day4,
+    day5,
+    day6,
+    total,
     username: user.username
   });
   newDetail
