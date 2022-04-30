@@ -80,4 +80,12 @@ router.route("/:user/user").get(auth, (req, res) => {
   });
 });
 
+//prev data
+router.route("/:user/user/prev").get(auth, (req, res) => {
+  const { user } = req.params;
+  Detail.findOne({ username: user }).sort({ date: -1 })
+  .then(detail => res.json(detail))
+  .catch(err => res.status(400).json("error: " + err));
+});
+
 module.exports = router;
