@@ -17,8 +17,12 @@ const detailSchema = new Schema({
     type: Schema.Types.Decimal128
   },
   username: {
-    type: String
-  },
+    type: String,
+    type: String,
+    required: true,
+    trim: true,
+    minlength: 3
+  }
 });
 
 const Detail = mongoose.model("Detail", detailSchema);
