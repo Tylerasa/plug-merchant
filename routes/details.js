@@ -42,4 +42,14 @@ router.route("/:id").get(auth, (req, res) => {
   });
 });
 
+//get all details by a user
+router.route("/:user/user").get(auth, (req, res) => {
+  const { user } = req.params;
+  console.log(user);
+  Detail.find({ username: user }, (err, details) => {
+    if (err) res.status(400).json("error: " + err);
+    else res.status(200).json(details);
+  });
+});
+
 module.exports = router;
