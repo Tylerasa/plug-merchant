@@ -15,8 +15,11 @@ const detailSchema = new Schema({
   },
   avg: {
     type: Schema.Types.Decimal128
-  }
+  },
+  user: {
+    type: String
+  },
 });
 
-const Detail = mongoose.model("Post", detailSchema);
+const Detail = mongoose.model("Detail", detailSchema);
 module.exports = Detail;

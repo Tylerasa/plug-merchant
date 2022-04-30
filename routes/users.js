@@ -68,7 +68,8 @@ router.route("/login").post((req, res) => {
           user: {
             name: user.name,
             region: user.region,
-            username: user.username
+            username: user.username,
+            id: user.id
           }
         });
       });
