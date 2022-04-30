@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const detailSchema = new Schema({
   deployed: {
-    type: String
+    type: Number
   },
   active: {
-    type: String
+    type: Number
   },
   inactive: {
-    type: String
+    type: Number
   },
   total: {
     type: Number
