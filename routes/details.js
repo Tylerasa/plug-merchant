@@ -27,7 +27,8 @@ router.route("/add/:id").post(auth, async (req, res) => {
     day4,
     day5,
     day6,
-    total
+    total,
+    retailers
   } = req.body;
   const { id } = req.params;
   const user = await User.findById(id);
@@ -47,6 +48,7 @@ router.route("/add/:id").post(auth, async (req, res) => {
     day5,
     day6,
     total,
+    retailers,
     username: user.username
   });
   newDetail

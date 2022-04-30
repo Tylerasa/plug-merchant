@@ -46,6 +46,7 @@ const detailSchema = new Schema({
   toal: {
     type: Number
   },
+  retailers: { type: Array, default: [] },
   username: {
     type: String,
     type: String,
