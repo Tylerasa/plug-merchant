@@ -47,6 +47,10 @@ const detailSchema = new Schema({
     type: Number
   },
   retailers: { type: Array, default: [] },
+  date: {
+    type: Date,
+    default: Date.now
+  },
   username: {
     type: String,
     type: String,
