@@ -4,6 +4,12 @@ const detailSchema = new Schema({
   week: {
     type: String
   },
+  year: {
+    type: String
+  },
+  region: {
+    type: String
+  },
   deployed: {
     type: Number
   },
@@ -20,10 +26,13 @@ const detailSchema = new Schema({
     type: Schema.Types.Decimal128
   },
   call: {
-    type: String
+    type: Number
   },
   visitation: {
-    type: String
+    type: Number
+  },
+  day0: {
+    type: Number
   },
   day1: {
     type: Number
@@ -46,18 +55,18 @@ const detailSchema = new Schema({
   toal: {
     type: Number
   },
-  retailers: { type: Array, default: [] },
+  topRetailers: { type: Array, default: [] },
   date: {
     type: Date,
     default: Date.now
   },
-  username: {
-    type: String,
-    type: String,
-    required: true,
-    trim: true,
-    minlength: 3
-  }
+  // username: {
+  //   type: String,
+  //   type: String,
+  //   required: true,
+  //   trim: true,
+  //   minlength: 3
+  // }
 });
 
 const Detail = mongoose.model("Detail", detailSchema);
