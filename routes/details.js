@@ -111,4 +111,11 @@ router.route("/:region/:week/:year").get(auth, (req, res) => {
     .catch((err) => res.status(400).json("error: " + err));
 });
 
+router.route("/getWeeks/:region").get(auth, (req, res) => {
+  const { region } = req.params;
+  Detail.find({ region })
+    .then((detail) => res.json(detail))
+    .catch((err) => res.status(400).json("error: " + err));
+});
+
 module.exports = router;
