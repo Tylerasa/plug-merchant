@@ -2,63 +2,67 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const detailSchema = new Schema({
   week: {
-    type: String
+    type: String,
   },
   year: {
-    type: String
+    type: String,
   },
   region: {
-    type: String
+    type: String,
   },
   deployed: {
-    type: Number
+    type: Number,
   },
   active: {
-    type: Number
+    type: Number,
   },
   inactive: {
-    type: Number
+    type: Number,
   },
   totalTickets: {
-    type: Number
+    type: Number,
   },
   avg: {
-    type: Schema.Types.Decimal128
+    type: Schema.Types.Decimal128,
   },
   call: {
-    type: Number
+    type: Number,
   },
   visitation: {
-    type: Number
+    type: Number,
   },
   day0: {
-    type: Number
+    type: Number,
   },
   day1: {
-    type: Number
+    type: Number,
   },
   day2: {
-    type: Number
+    type: Number,
   },
   day3: {
-    type: Number
+    type: Number,
   },
   day4: {
-    type: Number
+    type: Number,
   },
   day5: {
-    type: Number
+    type: Number,
   },
   day6: {
-    type: Number
+    type: Number,
   },
   toal: {
-    type: Number
+    type: Number,
   },
   topRetailers: { type: Array, default: [] },
+  totalTicketsSalesRegion: { type: Array, default: [] },
   date: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+  },
+  sheetDate: {
+    type: String,
   },
   // username: {
   //   type: String,

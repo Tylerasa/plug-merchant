@@ -33,6 +33,8 @@ router.route("/add/:id").post(auth, async (req, res) => {
     total,
     topRetailers,
     region,
+    totalTicketsSalesRegion,
+    sheetDate
   } = req.body;
   const { id } = req.params;
   const user = await User.findById(id);
@@ -56,6 +58,8 @@ router.route("/add/:id").post(auth, async (req, res) => {
     total,
     topRetailers,
     region,
+    totalTicketsSalesRegion,
+    sheetDate
     // username: user.username
   });
   newDetail
